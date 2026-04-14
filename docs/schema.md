@@ -3,7 +3,7 @@
 ## Overview
 
 Three tables: `users`, `bays`, `reservations`.
-The `reservations` table is the join point; a unique constraint on `(bay_id, date, timeslot, user_id)` prevents duplicate bookings, and a check constraint enforces the 2-user-per-slot capacity limit at the application layer (enforced via query before insert).
+The `reservations` table joins them all,  the`(bay_id, date, timeslot, user_id)` prevents duplicate bookings, and a check constraint enforces the 2-user-per-slot capacity limit at the application layer (enforced via query before insert).
 
 ---
 
